@@ -4,9 +4,10 @@ const loader= document.getElementById('loader');
 window.onload=function async (){
     fetchMovieList().then(res=>{
         res.forEach(movie=>{
-            const moviecontainer= document.querySelector(".movie-container")
+            const moviecontainer= document.querySelector(".movie-holder")
             const anchor= document.createElement("a");
-            anchor.classList.add("movie-link")
+            anchor.classList.add("movie-link");
+            anchor.id="movie-link"
             anchor.innerHTML=`
                 <div class="movie">
                     <div class="movie-img-wrapper" style="
@@ -22,7 +23,7 @@ window.onload=function async (){
         );
 }
 
-document.querySelector("movie-link").addEventListener("click",()=>{
+document.getElementById("movie-link").addEventListener("click",()=>{
     document.getElementById("booker").classList.toggle("show")
 })
 

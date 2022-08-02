@@ -66,14 +66,14 @@ a{
     cursor: pointer;
 }
 
-.movie-container{
+.movie-holder{
     overflow-x: auto;
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 8px;
 }
 
-.movie-container a{
+.movie-holder a{
     justify-content: center;
     margin: 1rem;
     text-decoration: none;
