@@ -9,7 +9,7 @@ window.onload=function async (){
             anchor.classList.add("movie-link");
             anchor.id="movie-link"
             anchor.innerHTML=`
-                <div class="movie">
+                <div class="movie" data-d="${movie.name}">
                     <div class="movie-img-wrapper" style="
                         background-image: url(${movie.imgUrl})">
                     </div>
@@ -19,8 +19,8 @@ window.onload=function async (){
             moviecontainer.appendChild(anchor);
         })
         document.getElementById('loader').remove();
-    }
-        );
+        }
+    );
 }
 
 document.getElementById("movie-link").addEventListener("click",()=>{
