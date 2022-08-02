@@ -122,15 +122,15 @@ a{
 }
 /* booker */
 
-#booker{
+/* #booker{
     position: absolute;
     left: 0;right: 0;top: -110%;
-}
+} */
 
-#booker.show{
+/* #booker.show{
     position: relative;
     bottom: 0;left: 0;right: 0;
-}
+} */
 
 
 
