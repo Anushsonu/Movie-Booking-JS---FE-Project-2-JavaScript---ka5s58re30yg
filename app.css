@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -15,4 +16,130 @@
 .v-none{
     visibility: hidden;
 }
+
+.logo{
+    letter-spacing: 3px;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+
+nav{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 6%, rgba(9,9,121,1) 51%, rgba(10,128,152,1) 100%);
+    color: white;
+    padding: 12px 16px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav li{
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+#loader{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #fff
+    url(./loader/1481.gif)
+    no-repeat center;
+}
+
+h4{
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+a{
+    cursor: pointer;
+}
+
+.movie-container{
+    overflow-x: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 8px;
+}
+
+.movie-container a{
+    justify-content: center;
+    margin: 1rem;
+    text-decoration: none;
+    border-left: 4px solid black;
+}
+
+.movie-img-wrapper{
+    background-size: cover;
+    height: 400px;width: 300px;
+}
+
+#booker-grid-holder{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 5rem;
+    width: 50%;
+}
+
+.left-box .booking-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 0.5rem;
+}
+
+.right-box .booking-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 0.5rem;
+
+}
+
+.booking-grid p{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking-grid *{
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    grid-gap: 0.5rem;
+    background-color: rgb(40, 204, 7);
+}
+/* booker */
+
+#booker{
+    position: absolute;
+    left: 0;right: 0;top: -110%;
+}
+
+#booker.show{
+    position: relative;
+    bottom: 0;left: 0;right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 
