@@ -17,6 +17,18 @@
     visibility: hidden;
 }
 
+#booker h3{
+    margin: 1rem 2rem;
+    text-align: center;
+}
+
+#book-ticket-btn{
+    justify-content: start;
+    border: 1px solid black;
+    padding: 2px 6px;
+    margin-top: 1rem;
+}
+
 .logo{
     letter-spacing: 3px;
     font-size: 1.7rem;
@@ -71,6 +83,7 @@ a{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 8px;
+    width: 100% auto;
 }
 
 .movie-holder a{
@@ -88,51 +101,57 @@ a{
 #booker-grid-holder{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-column-gap: 5rem;
-    width: 50%;
+    grid-column-gap: 50px;
+    margin: 1rem 3rem auto;
+    width: 500px;
+    
 }
 
-.left-box .booking-grid{
+#booker-grid-holder> div{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: 0.5rem;
+    grid-gap: 5px;
 }
 
-.right-box .booking-grid{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 0.5rem;
-
-}
-
-.booking-grid p{
+.booking-grid> div{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(63, 180, 0);
     text-align: center;
     align-items: center;
-    justify-content: center;
 }
 
-.booking-grid *{
-    border: 1px solid black;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    width: 80px;
-    grid-gap: 0.5rem;
-    background-color: rgb(40, 204, 7);
+#confirm-purchase{
+    
 }
-/* booker */
 
-/* #booker{
+#customer-detail-form input{
+    padding: 2px 10px;
+    margin: 10px 10px;
+}
+
+#booker{
     position: absolute;
     left: 0;right: 0;top: -110%;
-} */
+}
 
-/* #booker.show{
+#booker.show{
     position: relative;
     bottom: 0;left: 0;right: 0;
-} */
+}
 
+.unavailable-seat{
+    background-color: red !important;
+}
 
+.seat-hover{
+    background-color: #fff !important;
+}
+
+.active-seat{
+    border: 4px solid black !important;
+}
 
 
 
