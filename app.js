@@ -52,7 +52,7 @@ window.onload=function async (){
                     }
                 })
                 document.getElementById("booker").classList.add("show")
-                console.log({i},1)
+                //console.log({i},1)
                 const currentSeat= document.getElementById(`booker-grid-holder`)
                 currentSeat.addEventListener("click",(e)=>{
                     if(e.target.classList.contains('available-seat') && !e.target.classList.contains('unavailable-seat')){
@@ -71,28 +71,47 @@ window.onload=function async (){
                 })
 
                 document.getElementById("book-ticket-btn").addEventListener("click",()=>{
-                    document.getElementById("booker").classList.add("v-none");
+                    //document.getElementById("booker").classList.add("v-none");
+                    
                     //console.log(123)
-                    const main= document.getElementsByClassName("main")[0];
+                    const main= document.getElementById("booker");
                     const seat= document.getElementsByClassName("active-seat")
                     const seats=[]
                     Array.from(seat).forEach((el)=>{
                         const curr=(el.children[0].innerHTML);
                         seats.push(curr)
                     })
-                    console.log(seats);
                     seats.toString();
-                    const seatNumber= seat.innerText;
+                    document.getElementById("booker").innerHTML='';
+
                     const purchaseForm= document.createElement('div');
                     purchaseForm.id="confirm-purchase";
                     purchaseForm.innerHTML=`
                     <h3>Confirm your booking for seat numbers:${seats}</h3>
                     <form id="customer-detail-form">
-                        <input type="email" placeholder= "email" required><br>
-                        <input type="tel" placeholder= "phone" required>
-                        <button type="submit">Submit</button>
+                        <input type="email" id="email" placeholder= "email" required><br>
+                        <input type="tel" id="number" placeholder= "phone" required>
+                        <button type="button" id="submit" >Submit</button>
                     </form>`
                     main.appendChild(purchaseForm);
+
+                    document.getElementById("submit").addEventListener("click",()=>{
+                        console.log(2);
+                        
+                        console.log(112);
+                        const email= document.getElementById("email").value
+                        const number= document.getElementById("number").value
+                        document.getElementById("booker").innerHTML='';
+                        const success= document.createElement('div')
+                        success.id="success"
+                        success.innerHTML=`
+                            <h3>Booking details</h3><br>
+                            <h5>Seats: ${seats}</h5>
+                            <h5>Phone number: ${number}</h5>
+                            <h5>Email: ${email}</h5>
+                        `
+                        document.getElementById("booker").appendChild(success)
+                    })
                 })
             })
         })
